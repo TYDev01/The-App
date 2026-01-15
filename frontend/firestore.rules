@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow anyone to read and write to connected_wallets collection for testing
+    // IMPORTANT: Tighten these rules for production!
+    match /connected_wallets/{address} {
+      allow read: if true;  // Allow anyone to read
+      allow write: if true; // Allow anyone to write
+    }
+  }
+}

@@ -1,0 +1,6 @@
+try.md
+*.md
+!**/README.md
+SuperAdminPanel.tsx
+bored/.env
+bored
